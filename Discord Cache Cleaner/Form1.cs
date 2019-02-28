@@ -51,18 +51,20 @@ namespace Discord_Cache_Cleaner
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DirectoryInfo cacheFolder = new DirectoryInfo(textBox1.Text);
-            DialogResult confirmation = MessageBox.Show($"This will delete {cacheFolder.GetFiles().Length} files in your directory.", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-
-            if (confirmation == DialogResult.Yes)
+            try
             {
-                Functions.removeFiles(textBox1.Text);
-            }
-            else if (confirmation == DialogResult.No)
-            {
-                // Do Nothing
-            }
+                DirectoryInfo cacheFolder = new DirectoryInfo(textBox1.Text);
+                DialogResult confirmation = MessageBox.Show($"This will delete {cacheFolder.GetFiles().Length} files in your directory.", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
+                if (confirmation == DialogResult.Yes)
+                {
+                    Functions.removeFiles(textBox1.Text);
+                }
+                else if (confirmation == DialogResult.No)
+                {
+                    // Do Nothing
+                }
+            } catch { MessageBox.Show("Please make sure the directory is correct!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void button3_Click(object sender, EventArgs e)

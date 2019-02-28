@@ -19,7 +19,7 @@ namespace Discord_Cache_Cleaner
             Color color = new Color();
 
             if (size <= 100) { color = Color.Green; }
-            if (size >= 100) { color = Color.Orange; }
+            if (size > 100) { color = Color.Orange; }
             if (size >= 500) { color = Color.Red; }
 
             return color;
