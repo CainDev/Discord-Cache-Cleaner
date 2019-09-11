@@ -12,3 +12,17 @@ C:\Users\Joel\Desktop\Discord-Cache-Cleaner-master\Discord Cache Cleaner\obj\Deb
 C:\Users\Joel\Desktop\Discord-Cache-Cleaner-master\Discord Cache Cleaner\obj\Debug\Discord Cache Cleaner.exe
 C:\Users\Joel\Desktop\Discord-Cache-Cleaner-master\Discord Cache Cleaner\obj\Debug\Discord Cache Cleaner.pdb
 C:\Users\Joel\Desktop\Discord-Cache-Cleaner-master\Discord Cache Cleaner\obj\Debug\Discord Cache Cleaner.csprojAssemblyReference.cache
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\bin\Debug\Discord Cache Cleaner.exe.config
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\bin\Debug\Discord Cache Cleaner.exe.manifest
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\bin\Debug\Discord Cache Cleaner.application
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\bin\Debug\Discord Cache Cleaner.exe
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\bin\Debug\Discord Cache Cleaner.pdb
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\obj\Debug\Discord Cache Cleaner.csprojAssemblyReference.cache
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\obj\Debug\Discord_Cache_Cleaner.Form1.resources
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\obj\Debug\Discord_Cache_Cleaner.Properties.Resources.resources
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\obj\Debug\Discord Cache Cleaner.csproj.GenerateResource.cache
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\obj\Debug\Discord Cache Cleaner.csproj.CoreCompileInputs.cache
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\obj\Debug\Discord Cache Cleaner.exe.manifest
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\obj\Debug\Discord Cache Cleaner.application
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\obj\Debug\Discord Cache Cleaner.exe
+C:\Users\Joel\Documents\GitHub\Discord-Cache-Cleaner\Discord Cache Cleaner\obj\Debug\Discord Cache Cleaner.pdb

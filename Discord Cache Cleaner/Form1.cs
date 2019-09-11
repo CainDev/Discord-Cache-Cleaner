@@ -14,6 +14,7 @@ namespace Discord_Cache_Cleaner
 {
     public partial class Form1 : Form
     {
+        public bool firstFolderCheck = false;
         public Form1()
         {
             InitializeComponent();
@@ -48,7 +49,10 @@ namespace Discord_Cache_Cleaner
                 label4.Text = "Space Taken: " + Convert.ToString(fileFolderTotSize) + " MB";
                 label4.ForeColor = color;
             }
-            catch { MessageBox.Show("Please make sure the directory is correct!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            catch
+            {
+                MessageBox.Show("Please make sure the directory is correct!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -62,15 +66,32 @@ namespace Discord_Cache_Cleaner
                 {
                     Functions.removeFiles(textBox1.Text);
                 }
-            } catch { MessageBox.Show("Please make sure the directory is correct!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
+            catch
+            {
+                MessageBox.Show("Please make sure the directory is correct!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("If you can't find the Discord folder. Make sure you have 'Show Hidden Folders' Enabled.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            if (discDir.ShowDialog() == DialogResult.OK)
+            if (!firstFolderCheck)
             {
-                textBox1.Text = discDir.SelectedPath;
+                MessageBox.Show("If you can't find the Discord folder. Make sure you have 'Show Hidden Folders' Enabled.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if (discDir.ShowDialog() == DialogResult.OK)
+                {
+                    textBox1.Text = discDir.SelectedPath;
+                }
+
+                firstFolderCheck = true;
+            }
+            else
+            {
+                if (discDir.ShowDialog() == DialogResult.OK)
+                {
+                    textBox1.Text = discDir.SelectedPath;
+                }
             }
         }
 
