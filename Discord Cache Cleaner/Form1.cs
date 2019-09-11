@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.DirectoryServices.AccountManagement;
 using System.IO;
 
 namespace Discord_Cache_Cleaner
@@ -28,7 +29,7 @@ namespace Discord_Cache_Cleaner
                 float fileFolderTotSize = 0;
 
                 string fileCount = Convert.ToString(cacheFolder.GetFiles().Length);
-                label1.Text = $"{fileCount} Files Found!";
+                label3.Text = $"Total Files: {fileCount}";
 
                 // Calculates Total Folder Size
                 foreach (FileInfo file in cacheFolderSize)
@@ -38,13 +39,14 @@ namespace Discord_Cache_Cleaner
 
                 // Converts to MBs
                 fileFolderTotSize = fileFolderTotSize / 1024f / 1024f;
+                fileFolderTotSize = (float)Math.Round(fileFolderTotSize, 2);
 
                 // Sets Colour Output
                 var color = Functions.colorResponse(fileFolderTotSize);
 
                 // Updates Text Label
-                label2.Text = Convert.ToString(fileFolderTotSize) + " MB";
-                label2.ForeColor = color;
+                label4.Text = "Space Taken: " + Convert.ToString(fileFolderTotSize) + " MB";
+                label4.ForeColor = color;
             }
             catch { MessageBox.Show("Please make sure the directory is correct!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
@@ -60,17 +62,12 @@ namespace Discord_Cache_Cleaner
                 {
                     Functions.removeFiles(textBox1.Text);
                 }
-                else if (confirmation == DialogResult.No)
-                {
-                    // Do Nothing
-                }
             } catch { MessageBox.Show("Please make sure the directory is correct!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("If you can't find the Discord folder. Make sure you have 'Show Hidden Folders' Enabled.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             if (discDir.ShowDialog() == DialogResult.OK)
             {
                 textBox1.Text = discDir.SelectedPath;
@@ -78,5 +75,21 @@ namespace Discord_Cache_Cleaner
         }
 
         FolderBrowserDialog discDir = new FolderBrowserDialog();
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            UserPrincipal user = UserPrincipal.Current;
+            string currentUser = user.SamAccountName;
+
+            if (string.IsNullOrEmpty(currentUser))
+            {
+                currentUser = user.DisplayName;
+                textBox1.Text = $@"C:\Users\{currentUser}\AppData\Roaming\discord\Cache";
+            }
+            else
+            {
+                textBox1.Text = $@"C:\Users\{currentUser}\AppData\Roaming\discord\Cache";
+            }
+        }
     }
 }

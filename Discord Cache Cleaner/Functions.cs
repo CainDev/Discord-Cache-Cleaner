@@ -35,7 +35,9 @@ namespace Discord_Cache_Cleaner
                 {
                     file.Delete();
                 }
-                MessageBox.Show("All files deleted succesfully!");
+
+                MessageBox.Show("All files deleted succesfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             } catch { MessageBox.Show("Please make sure Discord is closed before trying again!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }    
     }
