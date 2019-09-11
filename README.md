@@ -6,4 +6,4 @@ This was made due to the recent discovery that Discord holds all your files from
 This will remove all files from the C:\Users\YOUR-NAME\AppData\Roaming\discord\Cache directory.
 
 ## Screenshots
-<img src="https://i.imgur.com/9EEhmtH.png">
+<img src="https://i.imgur.com/5ic7vS1.png">
